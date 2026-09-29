@@ -10,30 +10,31 @@
 | `Cover_Letter_Diagnostics.docx` | Cover letter |
 | `figures/Figure1–3.png` | Figure files (600 dpi) |
 
-## Supplementary tables and why each is kept
+## Supplementary tables (one file, eight tables)
 
 | Table | Content | Why it is needed |
 |---|---|---|
-| S1 | Search strategies, line by line | PRISMA item 7 (search reproducibility) |
+| S1 | Search strategies as recorded, limits, dates, and yields | PRISMA item 7 |
 | S2 | Full data extraction (47 reports) | PRISMA items 17 and 19 |
-| S3 | The 11 reports assessed without the complete article | Transparency of source access |
+| S3 | The 11 reports assessed from the abstract only, with DOIs | Transparency of source access |
 | S4 | Excluded reports that might appear eligible | PRISMA item 16b |
 | S5 | Cohort-overlap map | Supports the cohort-family clustering |
 | S6 | Representative-estimate selection (37 families) | Transparency of estimate selection |
-| S7 | PROBAST+AI domain judgments | PRISMA item 18 |
-| S8 | Analysis-domain signalling questions | Auditable risk-of-bias judgments |
-| S9 | Applicability against the intended-use population | Applicability transparency |
+| S7 | PROBAST+AI domain judgments, precision of each AUC, and study-specific reasons, with DOIs | PRISMA item 18 |
+| S8 | Applicability against the intended-use population | PRISMA item 18 |
 
-## Items only the authors can complete before submitting
+## Facts only the authors can add
 
-1. **Marques et al. 2018:** the complete article is available in the UNESP repository. Re-extract the exact AUCs, specificity and methods, and remove its †. The limited-access count then changes from 11 to 10, in the Abstract, Sections 2.4, 3.1, 3.9 and 4.7, Figure 1, and Table S3.
-2. **PROSPERO date:** add the exact registration date to Section 2.1 if you want to show it. The text already states that registration came before searching and gives the link.
-3. **Search details:** confirm the following, and rerun and update the yields if anything differs:
-   - each line-by-line strategy in Table S1 matches what was run (Embase line structure; PsycInfo on EBSCOhost);
-   - the names of the registries and hand-searched journals, if you have them.
-4. **Review team size:** the Methods say "four-member review team", but the paper has five authors. Change this to five if all five took part.
-5. **Re-judged items:** confirm the re-judged applicability ratings (Table S9) and the signalling-question answers (Table S8) against the articles.
-6. **Possible missed study:** check that *Sci. Rep.* 2026;16:21130 (wearable gait features vs intrinsic risk indicators; 86 fallers, 77 non-fallers) is among your excluded records. It appears to be retrospective faller classification.
+These items need records that are not in the files. Nothing was invented to fill them.
+
+1. **Marques et al. 2018:** the full text is in the UNESP repository. Re-extract it and remove its †; the abstract-only count then becomes 10.
+2. **PROSPERO:** the claim that the protocol was registered before searching was removed because it could not be verified. If the record history confirms it, add the registration date to Section 2.1.
+3. **Search records:**
+   - Registry names, hand-searched journal names, and supplementary search histories were not available. The manuscript reports these sources as aggregate yields and states this as a limitation.
+   - If you have the database export histories, add them to Table S1.
+4. **PROBAST+AI item numbers:** judgments are reported per domain with study-specific reasons. If you complete the official PROBAST+AI form item by item, Table S7 can cite the item numbers and page locations.
+5. **Review team:** the Methods say "four-member review team" but the paper has five authors. Correct this if all five took part.
+6. **Possible missed study:** confirm that *Sci. Rep.* 2026;16:21130 is among your excluded records.
 
 ## Special Issue
 

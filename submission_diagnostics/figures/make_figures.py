@@ -82,9 +82,9 @@ fig.savefig('fig/Figure2_AUC_events.png',bbox_inches='tight',dpi=600); plt.close
 # ---------------- Figure 3: PROBAST+AI ----------------
 cols={'Low':'#0ca30c','Unclear':'#eda100','High':'#d03b3b'}
 panels=[('A. Part A: concern about model-development quality (n = 45 reports)',
-  [('Participants and data sources',20,11,14),('Predictors',36,8,1),('Outcome',31,9,5),('Analysis',0,0,45),('Overall',0,0,45)]),
+  [('Participants and data sources',20,11,14),('Predictors',36,8,1),('Outcome',31,9,5),('Analysis',0,3,42),('Overall',0,2,43)]),
  ('B. Part B: risk of bias in model evaluation (n = 47 reports)',
-  [('Participants and data sources',19,11,17),('Predictors',37,8,2),('Outcome',33,9,5),('Analysis',1,0,46),('Overall',0,0,47)]),
+  [('Participants and data sources',19,11,17),('Predictors',37,8,2),('Outcome',33,9,5),('Analysis',1,3,43),('Overall',0,2,45)]),
  ('C. Applicability to the intended-use population (development n = 45; evaluation n = 47)',
   [('Development: participants',43,0,2),('Development: predictors',42,3,0),('Development: outcome',43,0,2),('Development: overall',38,3,4),
    ('Evaluation: participants',45,0,2),('Evaluation: predictors',42,4,1),('Evaluation: outcome',46,0,1),('Evaluation: overall',39,4,4)])]
