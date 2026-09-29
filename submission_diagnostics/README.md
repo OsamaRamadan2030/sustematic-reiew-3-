@@ -10,21 +10,19 @@
 | `Cover_Letter_Diagnostics.docx` | Cover letter |
 | `figures/Figure1–3.png` | Figure files (600 dpi) |
 
-`author_records/Response_to_Review_Concerns.docx` records how each concern from the pre-submission review was addressed. It is for your records and is not uploaded with a new submission.
-
 ## Supplementary tables and why each is kept
 
 | Table | Content | Why it is needed |
 |---|---|---|
-| S1 | Search strategies, line by line | PRISMA item 7; review concern 3 |
+| S1 | Search strategies, line by line | PRISMA item 7 (search reproducibility) |
 | S2 | Full data extraction (47 reports) | PRISMA items 17 and 19 |
-| S3 | The 11 reports assessed without the complete article | Review concern 1 |
+| S3 | The 11 reports assessed without the complete article | Transparency of source access |
 | S4 | Excluded reports that might appear eligible | PRISMA item 16b |
 | S5 | Cohort-overlap map | Supports the cohort-family clustering |
-| S6 | Representative-estimate selection (37 families) | Review concern 4 |
-| S7 | PROBAST+AI domain judgments | PRISMA item 18; review concern 2 |
-| S8 | Analysis-domain signalling questions | Review concern 2 |
-| S9 | Applicability against the intended-use population | Review concern 6 |
+| S6 | Representative-estimate selection (37 families) | Transparency of estimate selection |
+| S7 | PROBAST+AI domain judgments | PRISMA item 18 |
+| S8 | Analysis-domain signalling questions | Auditable risk-of-bias judgments |
+| S9 | Applicability against the intended-use population | Applicability transparency |
 
 ## Items only the authors can complete before submitting
 
@@ -36,7 +34,6 @@
 4. **Review team size:** the Methods say "four-member review team", but the paper has five authors. Change this to five if all five took part.
 5. **Re-judged items:** confirm the re-judged applicability ratings (Table S9) and the signalling-question answers (Table S8) against the articles.
 6. **Possible missed study:** check that *Sci. Rep.* 2026;16:21130 (wearable gait features vs intrinsic risk indicators; 86 fallers, 77 non-fallers) is among your excluded records. It appears to be retrospective faller classification.
-7. **MDPI submission form:** answer the question about previous submission to an MDPI journal (*J. Clin. Med.*) accurately.
 
 ## Special Issue
 
