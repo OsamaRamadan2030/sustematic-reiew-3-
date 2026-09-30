@@ -33,29 +33,29 @@ arrow(54,77.2,60,77.2); arrow(31,74,31,69.5)
 box(8,63,46,6.5,"Reports sought for retrieval (n = 352)")
 box(60,62.5,38,7.5,"Reports not retrieved (n = 11)\n(not assessed for eligibility)",fs=7.8)
 arrow(54,66.2,60,66.2); arrow(31,63,31,53.6)
-box(8,45,46,8.5,"Reports assessed for eligibility (n = 341)\nincluding 11 assessed from the abstract and\nother accessible primary material",fs=7.8)
+box(8,45,46,8.5,"Reports assessed for eligibility (n = 341)\nincluding 10 assessed from abstracts only",fs=7.8)
 box(60,30.5,38,29,"Reports excluded (n = 294)\n• No prospective fall outcome or no valid\n   temporal separation: 99\n• Fall detection/event recognition: 53\n• No individualized model performance: 44\n• No sensor-derived gait predictor: 35\n• Age criterion not met: 27\n• Ineligible publication type: 20\n• Simulated or synthetic fall data: 10\n• Duplicate report: 6",fs=7.3,align='left')
 arrow(54,49.2,60,49.2); arrow(31,45,31,35.5)
-box(8,24.5,46,11,"Reports included in the review (n = 47)\n36 complete article; 11 abstract and other\naccessible primary material\nIndependent cohort families (n = 37)",lw=1.6,ec='#184f95',fs=7.8)
-fig.savefig('fig/Figure1_PRISMA.png',bbox_inches='tight',dpi=600); plt.close(fig)
+box(8,24.5,46,11,"Reports included in the review (n = 47)\nComplete articles: n = 37; abstracts only: n = 10\nIndependent cohort families (n = 37)",lw=1.6,ec='#184f95',fs=7.8)
+fig.savefig('fig4/Figure1_PRISMA.png',bbox_inches='tight',dpi=600); plt.close(fig)
 
 # ---------------- Figure 2: AUC vs events ----------------
-data = [('Dasgupta 2022',14,.99,'I'),('Shah 2023',25,.94,'A'),('Giardini 2025',10,.91,'A'),('Guan 2025',15,.89,'I'),('Sturchio 2021',14,.87,'A'),
+data = [('Dasgupta 2022',14,.99,'I'),('Shah 2023',25,.94,'A'),('Guan 2025',15,.89,'I'),('Sturchio 2021',14,.87,'A'),
 ('Sotirakis 2024',23,.85,'I'),('Ma 2022',14,.838,'A'),('Doi 2013',16,.81,'A'),('Lo 2019',39,.79,'I'),('Greene 2012',83,.78,'I'),('Horak 2023',91,.751,'A'),
 ('Nait Aicha 2018',101,.75,'I'),('Schwenk 2014',28,.771,'A'),('Bizovska 2018',15,.760,'A'),('Adeli 2023',20,.762,'I'),('Marschollek 2011',19,.72,'I'),
-('Maiora 2024',21,.73,'I'),('Suffoletto 2026',94,.72,'A'),('Mignardot 2014',20,.70,'A'),('Caronni 2023',82,.69,'A'),('Lai 2025',5,.688,'F'),
+('Maiora 2024',21,.73,'I'),('Suffoletto 2026',94,.72,'A'),('Marques 2018',53,.72,'A'),('Mignardot 2014',20,.70,'A'),('Caronni 2023',82,.69,'A'),('Lai 2025',5,.688,'F'),
 ('Roshdibenam 2021',25,.56,'I'),('Zhang 2024',105,.53,'X'),('Silva 2020',74,.505,'I')]
 style={'A':('Apparent (development data)','o','#2a78d6'),'I':('Internal validation (resampling or split)','s','#eb6834'),
        'F':('Prospective evaluation of a fixed score','D','#1baf7a'),'X':('Independent-cohort evaluation (original coefficients)','^','#4a3aa7')}
-off={'Dasgupta 2022':(6,-2,'left'),'Shah 2023':(6,-2,'left'),'Giardini 2025':(-6,-2,'right'),'Guan 2025':(6,-2,'left'),'Sturchio 2021':(-6,2,'right'),
+off={'Dasgupta 2022':(6,-2,'left'),'Shah 2023':(6,-2,'left'),'Marques 2018':(-6,6,'right'),'Guan 2025':(6,-2,'left'),'Sturchio 2021':(-6,2,'right'),
 'Sotirakis 2024':(6,-2,'left'),'Ma 2022':(-6,-5,'right'),'Doi 2013':(6,-3,'left'),'Lo 2019':(6,-3,'left'),'Greene 2012':(6,4,'left'),'Horak 2023':(-6,-6,'right'),
 'Nait Aicha 2018':(6,-3,'left'),'Schwenk 2014':(6,0,'left'),'Bizovska 2018':(-6,3,'right'),'Adeli 2023':(6,-7,'left'),'Marschollek 2011':(-6,0,'right'),
 'Maiora 2024':(6,-4,'left'),'Suffoletto 2026':(7,-8,'left'),'Mignardot 2014':(6,-4,'left'),'Caronni 2023':(-6,-3,'right'),'Lai 2025':(6,-3,'left'),
 'Roshdibenam 2021':(6,-3,'left'),'Zhang 2024':(-6,6,'right'),'Silva 2020':(-6,6,'right')}
 fig, ax = plt.subplots(figsize=(7.2,4.6))
 ax.axhline(0.5,color=SEC,lw=0.9,ls=(0,(4,3)),zorder=1); ax.text(4.1,0.508,'Chance (AUC = 0.50)',fontsize=7.5,color=SEC)
-ax.axhline(0.761,color='#898781',lw=0.9,ls=(0,(1,2)),zorder=1,label='Median representative AUC (0.761)')
-LIM={'Greene 2012','Ma 2022','Giardini 2025','Suffoletto 2026'}
+ax.axhline(0.760,color='#898781',lw=0.9,ls=(0,(1,2)),zorder=1,label='Median of 25 representative AUCs (0.760)')
+LIM={'Greene 2012','Ma 2022','Suffoletto 2026'}
 CI={'Doi 2013':(0.69,0.93),'Mignardot 2014':(0.64,0.75),'Horak 2023':(0.680,0.821),'Shah 2023':(0.84,1.00),'Dasgupta 2022':(0.98,1.00),'Roshdibenam 2021':(0.33,0.74)}
 for n,e,a,k in data:
     if n in CI:
@@ -77,14 +77,14 @@ ax.minorticks_off()
 ax.set_xlabel('Participants with the outcome event (log scale)'); ax.set_ylabel('Representative AUC')
 ax.grid(axis='y',color=GRID,lw=0.6); ax.spines[['top','right']].set_visible(False)
 h,l=ax.get_legend_handles_labels(); ax.legend(handles=h+extra,loc='upper center',bbox_to_anchor=(0.5,-0.14),ncol=2,frameon=False,fontsize=7.4,handletextpad=0.4,columnspacing=1.2)
-fig.savefig('fig/Figure2_AUC_events.png',bbox_inches='tight',dpi=600); plt.close(fig)
+fig.savefig('fig4/Figure2_AUC_events.png',bbox_inches='tight',dpi=600); plt.close(fig)
 
 # ---------------- Figure 3: PROBAST+AI ----------------
 cols={'Low':'#0ca30c','Unclear':'#eda100','High':'#d03b3b'}
-panels=[('A. Part A: concern about model-development quality (n = 45 reports)',
-  [('Participants and data sources',20,11,14),('Predictors',36,8,1),('Outcome',31,9,5),('Analysis',0,3,42),('Overall',0,2,43)]),
+panels=[('A. Part A: model-development quality (n = 45 reports)',
+  [('Participants and data sources',20,10,15),('Predictors',37,7,1),('Outcome',31,8,6),('Analysis',0,2,43),('Overall',0,1,44)]),
  ('B. Part B: risk of bias in model evaluation (n = 47 reports)',
-  [('Participants and data sources',19,11,17),('Predictors',37,8,2),('Outcome',33,9,5),('Analysis',1,3,43),('Overall',0,2,45)]),
+  [('Participants and data sources',19,10,18),('Predictors',38,7,2),('Outcome',33,8,6),('Analysis',1,2,44),('Overall',0,1,46)]),
  ('C. Applicability to the intended-use population (development n = 45; evaluation n = 47)',
   [('Development: participants',43,0,2),('Development: predictors',42,3,0),('Development: outcome',43,0,2),('Development: overall',38,3,4),
    ('Evaluation: participants',45,0,2),('Evaluation: predictors',42,4,1),('Evaluation: outcome',46,0,1),('Evaluation: overall',39,4,4)])]
@@ -97,7 +97,7 @@ for ax,(title,rows) in zip(axes,panels):
             if val==0: continue
             w=100*val/tot
             ax.barh(yi,w-0.4,left=left+0.2,height=0.62,color=cols[name],edgecolor='none',)
-            if w>=3.0: ax.text(left+w/2,yi,str(val),ha='center',va='center',fontsize=7.6,color='white' if name!='Unclear' else INK,fontweight='bold')
+            ax.text(left+w/2,yi,str(val),ha='center',va='center',fontsize=7.6 if w>=3.0 else 6.4,color='white' if name!='Unclear' else INK,fontweight='bold')
             left+=w
     ax.set_yticks(y); ax.set_yticklabels([r[0] for r in rows],fontsize=8)
     ax.set_xlim(0,100); ax.set_xticks([0,25,50,75,100]); ax.set_xticklabels(['0%','25%','50%','75%','100%'],fontsize=7.6)
@@ -107,5 +107,5 @@ from matplotlib.patches import Patch
 fig.legend(handles=[Patch(fc=cols['Low'],label='Low'),Patch(fc=cols['Unclear'],label='Unclear'),Patch(fc=cols['High'],label='High')],
  loc='lower center',ncol=3,frameon=False,fontsize=8,bbox_to_anchor=(0.55,0.0))
 fig.subplots_adjust(bottom=0.08)
-fig.savefig('fig/Figure3_PROBAST_AI.png',bbox_inches='tight',dpi=600); plt.close(fig)
+fig.savefig('fig4/Figure3_PROBAST_AI.png',bbox_inches='tight',dpi=600); plt.close(fig)
 print('ok')
